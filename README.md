@@ -2,11 +2,15 @@
 
 ## Título de proyecto
 
-[Reto FrontEnd]
+Reto FrontEnd
 
 ## Descripción
 
 Este repositorio contiene un reto para desarrolladores FrontEnd
+
+## Screenshot
+![image](https://github.com/luismontanodev/reto-frontend/assets/141590168/0b36db7f-a366-4703-986a-8146ab2d07ce)
+
 
 ## Getting Started
 
@@ -14,7 +18,7 @@ Clonar repositorio del proyecto e instalar dependencias con _npm install_
 
 ### Prerequisitos
 
-NodeJs, NPM
+NodeJs versión: 19.5.0, NPM versión: 9.2.0
 
 ### Instalación
 
