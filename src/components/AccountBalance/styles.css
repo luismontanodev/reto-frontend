@@ -1,0 +1,16 @@
+#balance-container {
+	width: 30%;
+	height: 35vh;
+}
+
+.analitics-font-size {
+	font-size: 0.8rem;
+}
+
+.incomes-fontColor {
+	color: #76c17f;
+}
+
+.expenses-fontColor {
+	color: #c97270;
+}

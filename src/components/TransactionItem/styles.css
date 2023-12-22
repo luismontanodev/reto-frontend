@@ -1,0 +1,35 @@
+.circle-red {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #ff8a8e;
+	margin-right: 8px;
+
+	filter: blur(1px);
+}
+
+.circle-green {
+	width: 30px;
+	height: 30px;
+	border-radius: 10%;
+	background-color: #75d48d;
+	margin-right: 8px;
+
+	filter: blur(1px);
+}
+
+.accordion-container {
+	width: 100%;
+}
+
+#transaction-container {
+	width: 350px;
+}
+
+.transactionCharge-redFont {
+	color: #ff8a8e;
+}
+
+.transactionCharge-greenFont {
+	color: #75d48d;
+}
