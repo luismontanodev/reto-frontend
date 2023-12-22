@@ -7,14 +7,14 @@ import "./styles.css";
 export const Component = () => {
 	const { transactions, addTransaction } = useContext(GlobalContext);
 
-	const [transactionName, setArgument] = useState("");
+	const [transactionName, setTransactioName] = useState("");
 	const [transactionFee, setMoney] = useState("");
 	const [error, setError] = useState("");
 
 	const handleInputChange = (event) => {
 		const { name, value } = event.target;
 		if (name === "transactionName") {
-			setArgument(value);
+			setTransactioName(value);
 		} else if (name === "transactionFee") {
 			setMoney(value);
 		}
@@ -29,12 +29,12 @@ export const Component = () => {
 		const newTransaction = {
 			id: transactions.length + 1,
 			transactionName,
-			transactionFee: parseFloat(transactionFee) || 0,
+			transactionFee: Number.parseFloat(transactionFee) || 0,
 		};
 
 		addTransaction(newTransaction);
 
-		setArgument("");
+		setTransactioName("");
 		setMoney("");
 		setError("");
 	};

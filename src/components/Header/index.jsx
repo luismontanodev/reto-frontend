@@ -21,7 +21,6 @@ const months = [
 
 export const Component = () => {
 	const { currentMonth } = useContext(GlobalContext);
-	console.log(currentMonth);
 	return (
 		<div
 			className="fluid text-center rounded-bottom mb-4"
@@ -34,7 +33,7 @@ export const Component = () => {
 							currentMonth === month ? "fw-bold" : "fw-normal"
 						}`}
 						key={index}
-						onClick={() => console.log("Month clicked")}
+						onClick={() => console.log()}
 					>
 						{month}
 					</h3>
