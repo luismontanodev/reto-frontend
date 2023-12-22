@@ -1,11 +1,8 @@
 import React from "react";
+
 import "./styles.css";
 
-export const Component = ({
-	transactionTitle,
-	isDiscount,
-	transactionCharge,
-}) => {
+export const Component = ({ transactionTitle, transactionCharge }) => {
 	const sign = transactionCharge > 0 ? "+" : "-";
 	return (
 		<div className="accordion mt-2 accordion-container" id="accordionExample">
@@ -23,11 +20,11 @@ export const Component = ({
 							</div>
 							<div className="col">
 								{transactionCharge < 0 ? (
-									<span className="transactionCharge-redFont fs-5 fw-bold">
+									<span className="transactionCharge-redFont fs-6 fw-bold">
 										{sign}${Math.abs(transactionCharge)}
 									</span>
 								) : (
-									<span className="transactionCharge-greenFont fs-5 fw-bold">
+									<span className="transactionCharge-greenFont fs-6 fw-bold">
 										{sign}${Math.abs(transactionCharge)}
 									</span>
 								)}

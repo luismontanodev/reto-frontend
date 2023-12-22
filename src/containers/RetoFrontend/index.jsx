@@ -1,10 +1,12 @@
 import React from "react";
 
-import { Header } from "../../components/Header";
-import { AccountBalance } from "../../components/AccountBalance";
-import { TransactionList } from "../../components/TransactionList";
-import { TransactionItem } from "../../components/TransactionItem";
-import { AddTransaction } from "../../components/AddTransaction";
+import {
+	Header,
+	AccountBalance,
+	TransactionList,
+	TransactionItem,
+	AddTransactionButton,
+} from "../../components/index";
 
 import "./styles.css";
 
@@ -24,12 +26,12 @@ export const Container = () => {
 			<AccountBalance>
 				<TransactionList />
 				<p className="previous-date fw-bold">{`Ayer - ${formattedYesterday}`}</p>
+
 				<TransactionItem
-					transactionTitle={"Uber"}
-					isDiscount={false}
-					transactionCharge={"2311"}
+					transactionTitle={"Regalos navideños"}
+					transactionCharge={"892.99"}
 				/>
-				<AddTransaction />
+				<AddTransactionButton />
 			</AccountBalance>
 		</div>
 	);

@@ -11,10 +11,9 @@ export const Component = ({ children }) => {
 	const { transactions } = useContext(GlobalContext);
 
 	const amounts = transactions.map((transaction) => transaction.transactionFee);
-	const totalBalance = amounts.reduce(
-		(accumulator, currentValue) => accumulator + currentValue,
-		0
-	);
+	const totalBalance = amounts
+		.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+		.toFixed(2);
 
 	const incomeAmount = transactions.map(
 		(transaction) => transaction.transactionFee
@@ -22,34 +21,38 @@ export const Component = ({ children }) => {
 
 	const incomes = incomeAmount
 		.filter((item) => item > 0)
-		.reduce((acc, item) => (acc += item), 0);
+		.reduce((acc, item) => (acc += item), 0)
+		.toFixed(2);
 
 	const expenses =
-		amounts.filter((item) => item < 0).reduce((acc, item) => (acc += item), 0) *
-		-1;
+		amounts
+			.filter((item) => item < 0)
+			.reduce((acc, item) => (acc += item), 0)
+			.toFixed(2) * -1;
 
 	return (
 		<div
-			className="container text-center rounded-4 p-2 shadow bg-light"
+			className="container text-center rounded-4 p-1 shadow bg-light"
 			id="balance-container"
 		>
-			<div className="row mt-5">
+			<div className="row mt-2">
 				<span className="fw-bold">Balance del mes</span>
-				<span className="text-primary fs-2 fw-bold">{`$${totalBalance}`}</span>
+				<span
+					className="fs-1 fw-bold"
+					id="totalBalance-color"
+				>{`$${totalBalance}`}</span>
 			</div>
 			<div className="row mt-3">
 				<div className="col">
-					<span className="text-success fw-bold incomes-fontColor">
-						Ingresos
-					</span>
+					<span className="fw-bold incomes-fontColor">Ingresos</span>
 					<div className="row">
-						<span className="text-success fs-3 fw-bold incomes-fontColor">{`+$${incomes}`}</span>
+						<span className="fs-3 fw-bold incomes-fontColor">{`+$${incomes}`}</span>
 					</div>
 				</div>
 				<div className="col">
-					<span className="text-danger fw-bold expenses-fontColor">Gastos</span>
+					<span className="fw-bold expenses-fontColor">Gastos</span>
 					<div className="row">
-						<span className="text-danger fs-3 fw-bold expenses-fontColor">{`-$${expenses}`}</span>
+						<span className="fs-3 fw-bold expenses-fontColor">{`-$${expenses}`}</span>
 					</div>
 				</div>
 			</div>

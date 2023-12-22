@@ -40,16 +40,16 @@ export const Component = () => {
 	};
 
 	return (
-		<div className="container-sm mb-4">
+		<>
 			<button
-				className="btn btn-info w-30 p-3 button-width fixed-bottom"
+				className="btn btn-info p-3 pl-3 button-width fixed-bottom text-light fw-bold"
 				data-bs-toggle="modal"
 				data-bs-target="#addTransaction-modal"
 			>
 				Agregar Movimiento
 			</button>
 			<div className="modal fade" id="addTransaction-modal" tabIndex="-1">
-				<div className="modal-dialog modal-dialog-centered">
+				<div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
 					<div className="modal-content">
 						<div className="modal-header">
 							<h5 className="modal-title">Añadir registro</h5>
@@ -62,20 +62,22 @@ export const Component = () => {
 						</div>
 						<div className="modal-body">
 							<input
+								className="rounded-1 form-control"
 								type="text"
 								name="transactionName"
 								value={transactionName}
 								onChange={handleInputChange}
-								placeholder="Concepto"
+								placeholder="Concepto..."
 							/>
 							<input
+								className="rounded-1 form-control mt-2"
 								type="number"
 								name="transactionFee"
 								value={transactionFee}
 								onChange={handleInputChange}
 								placeholder="Cantidad..."
 							/>
-							{error && <p className="text-danger">{error}</p>}
+							{error && <p className="text-danger mt-2">{error}</p>}
 						</div>
 						<div className="modal-footer">
 							<button
@@ -96,8 +98,8 @@ export const Component = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
-export { Component as AddTransaction };
+export { Component as AddTransactionButton };

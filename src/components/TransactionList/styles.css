@@ -1,0 +1,8 @@
+.transaction-list {
+	max-height: 250px;
+	overflow-y: auto;
+}
+
+.transaction-list::-webkit-scrollbar {
+	display: none;
+}

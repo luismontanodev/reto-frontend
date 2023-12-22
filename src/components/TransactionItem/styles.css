@@ -23,13 +23,15 @@
 }
 
 #transaction-container {
-	width: 350px;
+	width: 200px;
 }
 
 .transactionCharge-redFont {
 	color: #ff8a8e;
+	margin-left: 6rem;
 }
 
 .transactionCharge-greenFont {
 	color: #75d48d;
+	margin-left: 6rem;
 }

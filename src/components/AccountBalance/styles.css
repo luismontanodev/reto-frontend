@@ -1,6 +1,6 @@
 #balance-container {
 	width: 30%;
-	height: 35vh;
+	height: 30vh;
 }
 
 .analitics-font-size {
@@ -12,5 +12,9 @@
 }
 
 .expenses-fontColor {
-	color: #c97270;
+	color: #e0837e;
+}
+
+#totalBalance-color {
+	color: #6a7de7;
 }
