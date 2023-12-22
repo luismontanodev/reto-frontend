@@ -16,15 +16,17 @@ export const Component = ({ transactionTitle, transactionCharge }) => {
 						)}
 						<div className="row">
 							<div className="col" id="transaction-container">
-								<span className="fw-bold fs-6">{transactionTitle}</span>
+								<span className="fw-bold" style={{ fontSize: "12px" }}>
+									{transactionTitle}
+								</span>
 							</div>
 							<div className="col">
 								{transactionCharge < 0 ? (
-									<span className="transactionCharge-redFont fs-6 fw-bold">
+									<span className="transactionCharge-redFont fw-bold">
 										{sign}${Math.abs(transactionCharge)}
 									</span>
 								) : (
-									<span className="transactionCharge-greenFont fs-6 fw-bold">
+									<span className="transactionCharge-greenFont fw-bold">
 										{sign}${Math.abs(transactionCharge)}
 									</span>
 								)}

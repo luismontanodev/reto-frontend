@@ -1,5 +1,7 @@
 #balance-container {
-	width: 30%;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
 	height: 30vh;
 }
 

@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
 
-import { GlobalContext } from "../../context/GlobalContext";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 import { TransactionItem } from "../TransactionItem";
-
-import "./styles.css";
 
 export const Component = () => {
 	const { transactions } = useContext(GlobalContext);
@@ -20,7 +18,7 @@ export const Component = () => {
 			<div className="d-flex justify-content-between">
 				<span className="fw-bold">{`Hoy - ${formattedToday}`}</span>
 			</div>
-			<ul className="transaction-list">
+			<ul>
 				{transactions.map((transaction) => (
 					<TransactionItem
 						key={transaction.id}

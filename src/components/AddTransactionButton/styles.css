@@ -1,8 +1,0 @@
-.button-width {
-	width: 13%;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-bottom: 2rem;
-	background-color: #86a4fe;
-}

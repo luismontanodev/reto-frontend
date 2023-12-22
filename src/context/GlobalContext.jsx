@@ -1,12 +1,18 @@
 import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 
+const today = new Date();
+const currentMonth = today.toLocaleDateString("es-ES", {
+	month: "long",
+});
+
 const initialState = {
 	transactions: [
 		{ id: 1, transactionName: "Uber", transactionFee: -127.63 },
 		{ id: 2, transactionName: "Transferencia Ana", transactionFee: 503.47 },
 		{ id: 3, transactionName: "Netflix", transactionFee: -105.22 },
 	],
+	currentMonth: currentMonth,
 };
 
 export const GlobalContext = createContext(initialState);

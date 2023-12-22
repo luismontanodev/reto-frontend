@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import { GlobalContext } from "../../context/GlobalContext";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 import "./styles.css";
 
@@ -42,7 +42,7 @@ export const Component = () => {
 	return (
 		<>
 			<button
-				className="btn btn-info p-3 pl-3 button-width fixed-bottom text-light fw-bold"
+				className="btn p-3 pl-3 button-width text-light fw-bold btn-add-transaction"
 				data-bs-toggle="modal"
 				data-bs-target="#addTransaction-modal"
 			>

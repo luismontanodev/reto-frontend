@@ -1,10 +1,4 @@
 .container-styles {
-	background-color: #f4f8fe;
 	width: 100%;
 	height: 100vh;
-}
-
-.previous-date {
-	position: relative;
-	right: 31%;
 }

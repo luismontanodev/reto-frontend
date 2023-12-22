@@ -1,3 +1,18 @@
 #header-backgroundColor {
 	background-color: #6583f9;
 }
+
+.month-scroll-container {
+	display: flex;
+	justify-content: space-around;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	padding-bottom: 8px;
+}
+
+.month-scroll-container h3 {
+	scroll-snap-align: start;
+	white-space: nowrap;
+	margin-right: 16px;
+	padding-top: 8px;
+}
